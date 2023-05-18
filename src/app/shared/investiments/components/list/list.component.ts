@@ -13,7 +13,9 @@ export class ListComponent implements OnInit{
   constructor(private listInvestimentsService: ListInvestimentsService){}
 
   ngOnInit(): void {
-     this.listInvestimentsService.list().subscribe(res=> this.investiments = res); 
+     this.listInvestimentsService
+      .list()
+      .subscribe(res=> this.investiments = res); 
   }
 
 }
